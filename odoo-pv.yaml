@@ -1,0 +1,14 @@
+# odoo-pv.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: odoo-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /data/odoo
+
